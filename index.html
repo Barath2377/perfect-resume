@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="icon" href="pic/dgayary-9c6c88c8-b397-4abb-ba56-60846a0159e5.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a9690, #0d5d58);
+            color: #fff;
+            text-align: center;
+            padding: 2.5rem 0;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-content h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: 3px solid white;
+        }
+
+        nav {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+       
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1a9690;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0d5d58;
+        }
+
+        .section-content {
+            background-color: #111;
+            padding: 2rem;
+            margin: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            text-align: justify;
+        }
+
+        .section-content h2 {
+            color: #1a9690;
+            border-bottom: 2px solid #0d5d58;
+            padding-bottom: 5px;
+        }
+
+        .download-button, .resume-button {
+            background-color: #1a9690;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .download-button:hover, .resume-button:hover {
+            background-color: #0d5d58;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #222;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding: 5px 0;
+        }
+
+        span {
+            font-weight: bold;
+            color: #1a9690;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="pic/IMG-20240102-WA0003.jpg" alt="Your Profile Picture" class="profile-picture">
+            <h1>Barath G</h1>
+            <p>Web Developer</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section-content">
+        <h2>About Me</h2>
+        <p>I'm a <span>web development</span> expert passionate about creating dynamic and user-friendly websites. 
+            I craft high-performance web applications that enhance user experience and provide seamless digital solutions.</p>
+    </section>
+
+    <section id="education" class="section-content">
+        <h2>Education</h2>
+        <p>H.H. THE RAJA'S COLLEGE - B.Sc. Computer Science Student</p>
+    </section>
+
+    <section id="skills" class="section-content">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>DBMS</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section-content">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="#">E-Cart Website</a></li>
+            <li><a href="#">Commerce Website</a></li>
+            <li><a href="#">Fun Chatbot</a></li>
+            <li><a href="#">College Portal</a></li>
+        </ul>
+    </section>
+
+    <section id="resume" class="section-content">
+        <center>
+            <a href="Barath_G_Resume.pdf" target="_blank" class="resume-button">Resume</a><br>
+            <a href="Barath_G_Resume.pdf" target="_blank" class="download-button">Download CV</a>
+        </center>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Barath G</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
